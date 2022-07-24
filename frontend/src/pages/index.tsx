@@ -1,24 +1,37 @@
+import { useState } from "react"
 import Head from "../../node_modules/next/head"
 import Image from "../../node_modules/next/image"
 
 import logoImg from '../../public/logo.svg'
-import { Input, TextArea } from "../components/ui/Input/index"
-
+import { Button } from "../components/ui/Button/index"
+import { Input } from "../components/ui/Input/index"
 
 export default function Home() {
+  const [loading, setLoading] = useState(false)
+  
   return (
     <>
       <Head>
         <title>Eduardo Pizza - Faça seu login</title>
       </Head>
-      <div className="flex flex-col justify-center items-center gap-14 h-screen w-[1080px] max-w-[90%] mx-auto">
-        <Image src={logoImg} alt="Lo  go Sujeito Pizza"/>
+      <div className="min-h-screen flex justify-center items-center flex-col bg-background">
+        <Image src={logoImg} alt="Logo Sujeito Pizza"/>
 
-        <div>
-          <form className="flex flex-col items-center justify-center w-[600px]">
+        <div className="mt-8 w-[90%] flex items-center justify-center flex-col py-8 px-6 sm:w-[600px]">
+          <form className="w-[90%] flex flex-col">
             <Input type="email" placeholder="Digite seu email"/>
             <Input type="password" placeholder="Sua senha"/>
+
+            <Button
+              type="submit"
+              onClick={() => setLoading(true)}
+              loading={loading}
+            >
+              Acessar
+            </Button>
           </form>
+
+          <a className="font-bold cursor-pointer mt-4">Não possui uma conta? Cadastre-se</a>
         </div>
       </div>
     </>

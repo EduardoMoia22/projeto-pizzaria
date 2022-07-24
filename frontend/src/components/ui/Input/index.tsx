@@ -9,7 +9,7 @@ export function Input({...rest}: InputProps){
   return(
     <input 
       {...rest}
-      className="mb-4 h-10 rounded-lg bg-inputbg text-white p-4 border-[1px] border-solid border-border"
+      className="mb-4 h-10 rounded-lg bg-inputbg text-white p-4 border border-solid border-border"
     />
   )
 }
@@ -18,7 +18,7 @@ export function TextArea({...rest}: TextAreaProps){
   return(
     <textarea 
       {...rest}
-      className="mb-4 h-10 rounded-lg bg-inputbg text-white p-4 border-[1px] border-solid border-border"
+      className="mb-4 h-10 rounded-lg bg-inputbg text-white p-4 border border-solid border-border"
     />
   )
 }
