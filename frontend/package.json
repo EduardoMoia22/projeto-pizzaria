@@ -15,7 +15,8 @@
     "nookies": "^2.5.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.4.0"
+    "react-icons": "^4.4.0",
+    "react-toastify": "^9.0.7"
   },
   "devDependencies": {
     "@types/node": "^18.0.6",

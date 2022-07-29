@@ -8,7 +8,10 @@ import logoImg from '../../public/logo.svg'
 import { Button } from "../components/ui/Button/index"
 import { Input } from "../components/ui/Input/index"
 
+import { toast } from 'react-toastify';
+
 import { AuthContext } from "../contexts/AuthContext"
+import { canSSRGuest } from "../utils/canSSRGuest"
 
 export default function Home() {
   const [email, setEmail] = useState('')
@@ -21,12 +24,21 @@ export default function Home() {
   async function handleLogin(e: FormEvent){
     e.preventDefault()
 
+    if(email === '' || password === ''){
+      toast.warning('Preencha todos os campos')
+      return
+    }
+
+    setLoading(true)
+
     let data = {
       email,
       password
     }
 
     await signIn(data)
+
+    setLoading(false)
   }
   
   return (
@@ -55,7 +67,7 @@ export default function Home() {
 
             <Button
               type="submit"
-              loading={false}
+              loading={loading}
             >
               Acessar
             </Button>
@@ -69,3 +81,9 @@ export default function Home() {
     </>
   )
 }
+
+export const getServerSideProps = canSSRGuest(async (ctx) => {
+  return {
+    props: {}
+  }
+})
