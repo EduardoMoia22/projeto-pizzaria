@@ -1,7 +1,7 @@
 # projeto-pizzaria
 Projeto de sistema para uma pizzaria usando NextJs, NodeJs, TailwindCSS, PostgreSQL, Typescript e React Native
 
-# Para fazer o uso basta clonar o repositório com o nodejs intalado
+# Para fazer o uso basta clonar o repositório com o nodejs instalado
 Na pasta de backend, conecte seu banco de dados passando o link de conexão no .env e após, digite o seguinte comando para sincronizar o banco:
 
 ```bash
