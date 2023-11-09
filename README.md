@@ -13,7 +13,7 @@ Após, digite:
 npx prisma generate
 ```
 
-Após isso, entrar em ambas as pastas e digitar o seguinte comando
+Depois de digitar os comandos anteriores, entrar em ambas as pastas e digitar o seguinte comando
 
 ```bash
 npm i
