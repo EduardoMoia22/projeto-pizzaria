@@ -4,3 +4,16 @@ Projeto de sistema para uma pizzaria usando NextJs, NodeJs, TailwindCSS, Postgre
 # Para fazer o uso basta clonar o repositório com o nodejs intalado
 Após isso, entrar em ambas as pastas e digitar o seguinte comando
 
+```bash
+npm i
+# or
+yarn
+```
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+
